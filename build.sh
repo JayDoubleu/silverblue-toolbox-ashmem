@@ -7,6 +7,7 @@ echo "Install kernel, kernel-modules, kernel-devel"
 toolbox run sudo dnf -y install kernel kernel-modules kernel-devel --best
 
 echo "make ashmem_linux"
+toolbox run make clean -C ashmem/
 toolbox run make -C ashmem/
 
 echo "insmod ashmen_linux"
